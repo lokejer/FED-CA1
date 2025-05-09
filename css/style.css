@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* COLOUR PALETTE */
+:root {
+  --dark-green: #2c6e49;
+  --green: #4c956c;
+  --beige: #F5F5DC;
+  --lavender: #B57EDC;
+  --lavender-transparent: #b57edc74;
+  --brown: #d68c45;
+
+  --charcoal-black: #1d1d1d;
+  --off-white: #f7ede2;
+}
+
+/* BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--beige);
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+	/* hide scrollbar while still enabling scrolling */
+  overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: none; /* hides scrollbar in Firefox */
+}
+
+html::-webkit-scrollbar body::-webkit-scrollbar {
+	display: none; /* hides scrollbar in Chrome, Edge, Safari */
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--green);
+}
+
+/* INTRODUCTION STYLES */
+
+.introduction {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../assets/forest-bg.jpg');
+  background-size: cover;
+  background-position: center -920px;
+}
+
+.introduction .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 1;
+}
+
+/* !!!!!!!! title text h1 is manually placed in the center using margins, try to fix this issue */
+.title-text {  
+  text-align: center;
+  z-index: 10; /* put title-text above the overlay to prevent unwanted dimming of h1 */
+  font-size: 1.5rem; /* fills .title-text with content so z-index works */
+  position: relative;
+}
+
+.introduction .title-text h1 {
+  margin: 4.5em 0 5em 0; 
+  background: linear-gradient(
+  to bottom right, 
+  var(--dark-green),
+  var(--green));
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
+}
+
+/* ZERO-WASTE-PRINCIPLES STYLES */
+#zero-waste-principles {
+  width: 100vw;
+  display: flex; /* layout for sidenav and content */
+}
+
+#zero-waste-principles .content-wrapper {
+  /* toggle settings */
+  display: block; /* will change between block & none */
+
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+}
+
+#zero-waste-principles .title-text h1 {
+  margin-bottom: 1em;
+  text-align: left;
+  position: relative; /* to position the brown underline element */
+}
+
+#zero-waste-principles .title-text h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 70px; height: 10px;
+  background-color: var(--brown);
+}
+
+#zero-waste-principles .card {
+  width: 100%;
+  margin: 1em 0.4em;
+  /* padding: 1em; */
+  border: 1.6px solid var(--charcoal-black);
+  border-radius: 25px;
+  color: var(--charcoal-black);
+
+  display: flex;
+  align-items: center;
+}
+
+#zero-waste-principles .card .card-content {
+  padding: 0 0.6em;
+  font-size: 1.2rem;
+  translate: -5%;
+}
+
+/* ANNUAL STATISTICS STYLES */
+#annual-stats {
+  width: 100vw;
+}
+
+#annual-stats {
+  background-color: var(--beige);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#annual-stats h2 {
+  font-size: 2.5rem;
+  color: var(--dark-green);
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background-color: var(--lavender-transparent);
+  border-left: 6px solid var(--lavender);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.stat-box i {
+  color: var(--brown);
+  margin-right: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--brown);
+}
+
+.chart {
+  max-width: 600px;
+  margin: 3rem auto 1rem;
+  text-align: left;
+}
+
+.bar {
+  background-color: var(--lavender-transparent);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.bar span {
+  display: inline-block;
+  background-color: var(--green);
+  height: 20px;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
+/* ZERO-WASTE SUCCESS STORIES STYLES */
+#success-stories {
+  margin: 5em 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.polaroid {
+  margin: 0 1em;
+}
+
+.polaroid figure img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.polaroid figure {
+  padding: 10px;
+  width: 300px;
+  background: linear-gradient(to bottom right, var(--lavender), var(--lavender-transparent));
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}  
+.polaroid figure:hover {
+  transform: rotate(0deg) scale(1.02);
+}  
+
+figcaption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--charcoal-black);
+  padding-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* fade-in text */
+.polaroid:hover figcaption {
+  opacity: 1;
+}
