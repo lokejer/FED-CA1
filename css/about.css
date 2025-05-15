@@ -1,0 +1,22 @@
+nav {
+  background-color: var(--dark-green);
+}
+
+.content-wrapper {
+  display: flex;
+  margin: 2em 0 0 1em;
+}
+
+.title-text {
+  margin: 1em 0 0.4em 1em;
+  text-align: left;
+}
+
+.profile {
+  border: 2px solid var(--lavender-transparent);
+}
+
+.description p {
+  margin: 1em 1.6em 3em 1em;
+  line-height: 200%;
+}

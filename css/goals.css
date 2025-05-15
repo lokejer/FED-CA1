@@ -1,0 +1,67 @@
+nav {
+  background-color: var(--dark-green);
+}
+
+.glass-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--charcoal-black);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.glass-section .title-text {
+  margin: 1em;
+  font-size: 1.2rem;
+}
+
+.glass-section h1, .glass-section h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.glass-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.glass-section blockquote {
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--brown);
+  font-style: italic;
+}
+
+.glass-section figure {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.glass-section img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.glass-section figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.glass-section footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
