@@ -2,15 +2,20 @@
 
 /* COLOUR PALETTE */
 :root {
-  --dark-green: #2c6e49;
   --green: #4c956c;
-  --beige: #F5F5DC;
+  --dark-green: #2c6e49;
   --lavender: #B57EDC;
   --lavender-transparent: #b57edc74;
   --brown: #d68c45;
+  --dark-brown: #713600;
 
+  --golden-yellow: #facc15;
+  --golden-yellow-transparent: #facc1550;
+  
   --charcoal-black: #1d1d1d;
   --off-white: #f7ede2;
+  --beige: #F5F5DC;
+  --dark-beige: #e9e9cd;
 }
 
 /* BASE STYLES */
@@ -86,6 +91,7 @@ footer {
 /* ZERO-WASTE-PRINCIPLES STYLES */
 #zero-waste-principles {
   width: 100vw;
+  height: 150%;
   display: flex; /* layout for sidenav and content */
 }
 
@@ -133,61 +139,57 @@ footer {
 /* ANNUAL STATISTICS STYLES */
 #annual-stats {
   width: 100vw;
+  height: 90%;
+  padding: 4em;
+  background-color: var(--dark-beige);
 }
 
-#annual-stats {
+#annual-stats .card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#annual-stats .card {
+  width: 300px;
+  height: 180px;
+  translate: 0 -85%;
+  padding: 1.6em;
   background-color: var(--beige);
-  padding: 4rem 2rem;
-  text-align: center;
+  box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+
+  transition: transform 0.2s ease;
 }
 
-#annual-stats h2 {
-  font-size: 2.5rem;
-  color: var(--dark-green);
-  margin-bottom: 2rem;
-}
-
-.stat-box {
-  background-color: var(--lavender-transparent);
-  border-left: 6px solid var(--lavender);
-  border-radius: 12px;
-  padding: 1.5rem;
-  max-width: 700px;
-  margin: 1rem auto;
-  font-size: 1.2rem;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.stat-box:hover {
+#annual-stats .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.4);
 }
 
-.stat-box i {
-  color: var(--brown);
-  margin-right: 10px;
+#annual-stats .card h3 {
+  font-size: 2.2rem;
+  color: var(--dark-green);
 }
 
-.highlight {
-  font-weight: bold;
-  color: var(--brown);
+#annual-stats .card i {
+  font-size: 3.2rem; /* bigger icon size */
+  color: #d68b45cf;
+  position: absolute;
+  top: 40px; right: 40px;
 }
 
-.chart {
-  max-width: 600px;
-  margin: 3rem auto 1rem;
-  text-align: left;
-}
-
-.bar {
+#annual-stats .bar {
+  width: 400px;
   background-color: var(--lavender-transparent);
   border-radius: 20px;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
 }
 
-.bar span {
+#annual-stats .bar span {
   display: inline-block;
   background-color: var(--green);
   height: 20px;
@@ -195,9 +197,22 @@ footer {
   transition: width 0.4s ease;
 }
 
-.label {
-  margin-bottom: 0.3rem;
-  font-weight: bold;
+/* SECTION SEPARATOR BETWEEN #ANNUAL-STATS and #SUCCESS-STORIES */
+
+#section-separator {
+  padding: 0 4em 4em 4em;
+  text-align: center;
+}
+
+#section-separator h3 {
+  margin-top: 1.6em;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+#section-separator .title-text {
+  font-size: 2rem;
   color: var(--dark-green);
 }
 
@@ -211,6 +226,7 @@ footer {
 }
 
 #success-stories .polaroid {
+  translate: 0 -60%;
   margin: 0 1em;
 }
 
@@ -218,7 +234,7 @@ footer {
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 
 #success-stories .polaroid figure {
