@@ -105,6 +105,7 @@ footer {
 }
 
 #zero-waste-principles .title-text h1 {
+  font-size: 3rem;
   margin-bottom: 1em;
   text-align: left;
   position: relative; /* to position the brown underline element */
@@ -132,8 +133,11 @@ footer {
 
 #zero-waste-principles .card .card-content {
   padding: 0 0.6em;
-  font-size: 1.2rem;
   translate: -5%;
+}
+
+#zero-waste-principles .card .card-content h3 {
+  font-size: 1.7rem;
 }
 
 /* ANNUAL STATISTICS STYLES */
@@ -161,7 +165,7 @@ footer {
   display: flex;
   align-items: center;
 
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #annual-stats .card:hover {
