@@ -1,6 +1,12 @@
+/* ------------- change colour of navbar hover animations -------------- */
 nav {
   background-color: var(--dark-green);
 }
+
+nav li:hover::before {
+  background: var(--brown);
+}
+/* --------------------------------------------------------------------- */
 
 .content-wrapper {
   display: flex;
@@ -25,6 +31,7 @@ nav {
 
 .profile {
   border: 2px solid var(--lavender-transparent);
+  position: relative;
 }
 
 .description {
@@ -34,4 +41,34 @@ nav {
 .description p {
   margin: 1em 1.6em 3em 1em;
   line-height: 200%;
+}
+
+/* image border effect */
+/* button border effect */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.profile::before {
+  content: '';
+  position: absolute;
+  width: 101%; height: 101%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  
+  background-image: conic-gradient(from var(--angle), transparent 70%, var(--lavender-transparent));
+  box-shadow: 5px 5px 100px var(--lavender-transparent);
+  animation: 7s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }

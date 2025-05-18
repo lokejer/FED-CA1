@@ -1,6 +1,12 @@
+/* ------------- change colour of navbar hover animations -------------- */
 nav {
   background-color: var(--dark-green);
 }
+
+nav li:hover::before {
+  background: var(--brown);
+}
+/* --------------------------------------------------------------------- */
 
 .glass-section {
   background: rgba(255, 255, 255, 0.1);
