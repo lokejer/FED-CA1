@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* COLOUR PALETTE */
 :root {
+
+  /* accent colours */
   --green: #4c956c;
   --dark-green: #2c6e49;
   --lavender: #B57EDC;
@@ -9,9 +10,11 @@
   --brown: #d68c45;
   --dark-brown: #713600;
 
+  /* button colours */
   --golden-yellow: #facc15;
   --golden-yellow-transparent: #facc1550;
   
+  /* backgrounds & text */
   --charcoal-black: #1d1d1d;
   --off-white: #f7ede2;
   --beige: #F5F5DC;
@@ -73,7 +76,7 @@ footer {
 .title-text {  
   text-align: center;
   z-index: 10; /* put title-text above the overlay to prevent unwanted dimming of h1 */
-  font-size: 1.5rem; /* fills .title-text with content so z-index works */
+  font-size: 2rem; /* fills .title-text with content so z-index works */
   position: relative;
 }
 
@@ -91,7 +94,7 @@ footer {
 /* ZERO-WASTE-PRINCIPLES STYLES */
 #zero-waste-principles {
   width: 100vw;
-  height: 150%;
+  height: 150vh;
   display: flex; /* layout for sidenav and content */
 }
 
@@ -143,7 +146,7 @@ footer {
 /* ANNUAL STATISTICS STYLES */
 #annual-stats {
   width: 100vw;
-  height: 90%;
+  height: 95vh;
   padding: 4em;
   background-color: var(--dark-beige);
 }
@@ -152,12 +155,13 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  translate: 0 50%;
 }
 
 #annual-stats .card {
   width: 300px;
   height: 180px;
-  translate: 0 -85%;
+  translate: 0 -130%;
   padding: 1.6em;
   background-color: var(--beige);
   box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.2);
@@ -168,7 +172,12 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#annual-stats .card:hover {
+/* #annual-stats .card:hover {
+  cursor: pointer;
+} */
+
+/* do not allow user hover, hover is controlled by JS (change if cher dun allow JS) */
+#annual-stats .card.hover-effect {
   transform: translateY(-5px);
   box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.4);
 }
@@ -202,7 +211,6 @@ footer {
 }
 
 /* SECTION SEPARATOR BETWEEN #ANNUAL-STATS and #SUCCESS-STORIES */
-
 #section-separator {
   padding: 0 4em 4em 4em;
   text-align: center;
@@ -222,6 +230,7 @@ footer {
 
 /* ZERO-WASTE SUCCESS STORIES STYLES */
 #success-stories {
+  width: 100vw;
   margin: 5em 0;
   display: flex;
   justify-content: center;
@@ -230,9 +239,11 @@ footer {
 }
 
 #success-stories .polaroid {
-  translate: 0 -60%;
-  margin: 0 1em;
+  translate: 0 -85%;
+  margin: 4em 1em 0 1em;
 }
+
+.polaroid-link { text-decoration: none; }
 
 #success-stories .polaroid figure img {
   width: 100%;

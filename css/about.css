@@ -9,6 +9,7 @@ nav {
 
 .title-text {
   margin-left: 0.5em;
+  font-size: 1.6rem;
   text-align: left;
   color: var(--charcoal-black);
   position: relative;
@@ -24,6 +25,10 @@ nav {
 
 .profile {
   border: 2px solid var(--lavender-transparent);
+}
+
+.description {
+  margin: 1em;
 }
 
 .description p {
