@@ -236,66 +236,126 @@ footer {
 
 /* ANNUAL STATISTICS STYLES */
 #annual-stats {
-  width: 100vw;
-  padding: 4em;
-  background-color: var(--dark-beige);
+  padding: 2em;
 }
 
-#annual-stats .card-container {
+#annual-stats .title-text h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(
+    to bottom right, 
+    var(--dark-brown),
+    var(--brown));
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
+}
+
+/* Waste Breakdown Section */
+#annual-stats .waste-breakdown {
+  margin-top: 5em;
+  text-align: center;
+}
+
+#annual-stats .waste-breakdown .card-container {
   width: 100%;
+  padding: 2em 5em;
+
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-#annual-stats .card {
-  width: 300px;
-  height: 180px;
-  padding: 1.6em;
-  background-color: var(--beige);
-  box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.2);
+#annual-stats .waste-breakdown .card {
+  flex-grow: 1;
 
+  width: 300px;
+  height: 200px;
+  padding-left: 2em;
+  background-color: var(--beige);
+  box-shadow: 30px 30px 32px rgba(0, 0, 0, 0.15);
+  border: 4px solid var(--golden-yellow-transparent);
+  border-radius: 20px;
+  
   display: flex;
   align-items: center;
-
+  
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   position: relative;
 }
 
-/* do not allow user hover, hover is controlled by JS (change if cher dun allow JS) */
-/* 
-#annual-stats .card.hover-effect {
-  transform: translateY(-5px);
-  box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.4);
-}
-*/
-
-#annual-stats .card h3 {
-  font-size: 2.2rem;
+#annual-stats .waste-breakdown .card h3 {
+  font-size: 1.8rem;
   color: var(--dark-green);
 }
 
-#annual-stats .card i {
+#annual-stats .waste-breakdown .card i {
   position: absolute;
-  font-size: 3.2rem; /* bigger icon size */
+  font-size: 2.4rem;
   color: #d68b45cf;
-  top: 40px; right: 40px;
+  top: 30px; right: 30px;
 }
 
-#annual-stats .bar {
-  width: 400px;
+/* Bar Chart Section */
+#annual-stats .bar-chart {
+  margin-top: 5em;
+  text-align: center;
+}
+
+#annual-stats .bar-chart .chart-wrapper {
+  margin: 1rem auto;
+  padding: 2em 2em 0 2em;
+  max-width: 800px;
+  height: 400px;
   background-color: var(--lavender-transparent);
+  border: 3px solid var(--golden-yellow);
   border-radius: 20px;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 0.5rem;
 }
 
-#annual-stats .bar span {
-  display: inline-block;
+#annual-stats .bar-chart .bar {
+  width: 80px;
+  background-color: var(--dark-green);
+  color: var(--off-white);
+  font-size: 0.9rem;
+  padding-top: 5px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 5px 5px 32px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Recycling Progress Section */
+#annual-stats .recycling-progress {
+  margin-top: 5em;
+  text-align: center;
+}
+
+#annual-stats .recycling-progress .progress-bar-bg {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  height: 40px;
+  width: 80%;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+#annual-stats .recycling-progress .progress-bar-fill {
+  width: 56%; height: 100%;
+  padding-left: 1em;
+  font-size: 1.2rem;
   background-color: var(--green);
-  height: 20px;
-  border-radius: 10px;
-  transition: width 0.4s ease;
+  color: var(--off-white);
+  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 /* ZERO-WASTE SUCCESS STORIES STYLES */
