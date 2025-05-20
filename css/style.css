@@ -237,7 +237,6 @@ footer {
 /* ANNUAL STATISTICS STYLES */
 #annual-stats {
   width: 100vw;
-  height: 95vh;
   padding: 4em;
   background-color: var(--dark-beige);
 }
@@ -246,13 +245,11 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  translate: 0 50%;
 }
 
 #annual-stats .card {
   width: 300px;
   height: 180px;
-  translate: 0 -130%;
   padding: 1.6em;
   background-color: var(--beige);
   box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.2);
@@ -261,17 +258,17 @@ footer {
   align-items: center;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  position: relative;
 }
 
-/* #annual-stats .card:hover {
-  cursor: pointer;
-} */
-
 /* do not allow user hover, hover is controlled by JS (change if cher dun allow JS) */
+/* 
 #annual-stats .card.hover-effect {
   transform: translateY(-5px);
   box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.4);
 }
+*/
 
 #annual-stats .card h3 {
   font-size: 2.2rem;
@@ -279,9 +276,9 @@ footer {
 }
 
 #annual-stats .card i {
+  position: absolute;
   font-size: 3.2rem; /* bigger icon size */
   color: #d68b45cf;
-  position: absolute;
   top: 40px; right: 40px;
 }
 
@@ -301,37 +298,35 @@ footer {
   transition: width 0.4s ease;
 }
 
-/* SECTION SEPARATOR BETWEEN #ANNUAL-STATS and #SUCCESS-STORIES */
-#section-separator {
-  padding: 0 4em 4em 4em;
+/* ZERO-WASTE SUCCESS STORIES STYLES */
+#success-stories {
+  width: 100vw;
+  padding: 4em;
+}
+
+.success-header {
+  margin: 2em;
   text-align: center;
 }
 
-#section-separator h3 {
+.success-header h3 {
   margin-top: 1.6em;
   color: #333;
   font-size: 1.2rem;
   font-weight: 300;
 }
 
-#section-separator .title-text {
+.success-header .title-text {
   font-size: 2rem;
   color: var(--dark-green);
 }
 
-/* ZERO-WASTE SUCCESS STORIES STYLES */
-#success-stories {
-  width: 100vw;
-  margin: 5em 0;
+#success-stories .success-polaroids {
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   flex-wrap: wrap;
-}
-
-#success-stories .polaroid {
-  translate: 0 -85%;
-  margin: 4em 1em 0 1em;
 }
 
 .polaroid-link { text-decoration: none; }
