@@ -143,6 +143,7 @@ footer {
 #get-started span {
   color: var(--off-white);
   font-size: 1.3rem;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 #get-started i {
@@ -175,11 +176,10 @@ footer {
   color: var(--off-white);
   background: linear-gradient(to bottom right, var(--brown), var(--dark-brown));
   border-radius: 10px;
-  transition: transform 0.3s ease;
 }
 
 #get-started .expanded-menu a:hover {
-  transform: scale(0.98);
+  text-decoration: underline;
 }
 
 /* ZERO-WASTE-PRINCIPLES STYLES */

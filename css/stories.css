@@ -1,4 +1,5 @@
-/* HEADER */
+nav li:hover { background-color: transparent; }
+
 main {
 	width: 100vw;
 	position: relative;
@@ -7,10 +8,8 @@ main {
 main::before {
   content: "";
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+	width: 100%; height: 100%;
+	top: 0; left: 0;
 	z-index: -10;
   
 	/* whole page's background image */
@@ -19,43 +18,6 @@ main::before {
 	background-position: center -920px;
 	background-repeat: repeat-y;
 	filter: brightness(90%);
-}
-
-.success-header {
-  width: fit-content;
-	margin: 5em auto;
-	padding: 10em;
-	border-radius: 5px;
-	background: linear-gradient(
-    to bottom right,
-		rgba(0, 0, 0, 0.1),
-		rgba(0, 0, 0, 0.5)
-    );
-  }
-  
-.success-header .title-text {
-  font-size: 2rem; /* fills .title-text with content so z-index works */
-  position: relative;
-	z-index: 10; /* put title-text above the overlay to prevent unwanted dimming of h1 */
-}
-
-.success-header .title-text h1 {
-background: linear-gradient(
-  to bottom right,
-  var(--golden-yellow),
-  var(--golden-yellow-transparent)
-  );
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
-}
-
-/* Header */
-.success-header h3 {
-  font-weight: 300;
-  color: var(--golden-yellow-transparent);
-  font-size: 1.3rem;
-  margin-top: 10px;
 }
   
 /* Stories layout */
@@ -73,6 +35,7 @@ background: linear-gradient(
 
 /* positioning elements on top of my gallery item/card */
 .gallery-image { position: relative; }
+
 .gallery-image .learn-more-btn {
 
   /* position the button on bottom left corner of gallery item */
@@ -83,8 +46,6 @@ background: linear-gradient(
 
   /* button styles */
   text-decoration: none;
-  border-radius: 10px;
-  background-color: var(--golden-yellow-transparent);
   color: var(--charcoal-black);
   font-size: 1.03em;
 
@@ -114,6 +75,11 @@ background: linear-gradient(
   object-fit: cover;
   aspect-ratio: 4 / 3; /* make all images same size (fill empty space) */
 	border-radius: 20px;
+}
+
+.gallery-image .overlay h2 {
+  color: var(--golden-yellow);
+  margin-bottom: 1em;
 }
 
 /* overlay appears on hover */
