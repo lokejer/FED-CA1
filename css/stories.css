@@ -1,0 +1,133 @@
+/* HEADER */
+main {
+	width: 100vw;
+	position: relative;
+}
+
+main::before {
+  content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -10;
+  
+	/* whole page's background image */
+	background-image: url("../assets/paper\ BG.png");
+	background-size: cover;
+	background-position: center -920px;
+	background-repeat: repeat-y;
+	filter: brightness(90%);
+}
+
+.success-header {
+  width: fit-content;
+	margin: 5em auto;
+	padding: 10em;
+	border-radius: 5px;
+	background: linear-gradient(
+    to bottom right,
+		rgba(0, 0, 0, 0.1),
+		rgba(0, 0, 0, 0.5)
+    );
+  }
+  
+.success-header .title-text {
+  font-size: 2rem; /* fills .title-text with content so z-index works */
+  position: relative;
+	z-index: 10; /* put title-text above the overlay to prevent unwanted dimming of h1 */
+}
+
+.success-header .title-text h1 {
+background: linear-gradient(
+  to bottom right,
+  var(--golden-yellow),
+  var(--golden-yellow-transparent)
+  );
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
+}
+
+/* Header */
+.success-header h3 {
+  font-weight: 300;
+  color: var(--golden-yellow-transparent);
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+  
+/* Stories layout */
+#main-content {
+  width: min(1000px, 100%); /* responsive width */
+  margin: 0 auto; /* center the layout */
+}
+  
+.gallery {
+  padding: 4em;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* responsive grid */
+	gap: 50px;
+}
+
+/* positioning elements on top of my gallery item/card */
+.gallery-image { position: relative; }
+.gallery-image .learn-more-btn {
+
+  /* position the button on bottom left corner of gallery item */
+  position: absolute;
+  width: 100px; height: 50px;
+  bottom: 6px; left: 20px;
+  z-index: 1;
+
+  /* button styles */
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--golden-yellow-transparent);
+  color: var(--charcoal-black);
+  font-size: 1.03em;
+
+  /* center the text */
+  text-align: center; line-height: 50px;
+}
+.learn-more-btn:hover { text-decoration: underline; }
+
+.gallery-image .flag-icon {
+  position: absolute;
+  width: 70px; height: 70px;
+  bottom: 5px; right: 5px;
+  z-index: 1;
+  filter: brightness(80%);
+  opacity: 0.8;
+}
+
+.gallery-image .image-wrapper {
+  width: 100%; height: 100%;
+  border-radius: 20px;
+  overflow: hidden; /* hide any sharp corners */
+  position: relative;
+}
+
+.gallery-image .image-wrapper img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3; /* make all images same size (fill empty space) */
+	border-radius: 20px;
+}
+
+/* overlay appears on hover */
+.overlay {
+  position: absolute;
+  width: 100%; height: 100%;
+  bottom: 0; left: 0;
+  padding: 2em;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  color: #fff;
+  line-height: 2;
+
+  /* for the fade-in animation on hover */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.image-wrapper:hover .overlay { opacity: 1; }

@@ -120,7 +120,7 @@ footer {
 
   display: flex;
   align-items: center;
-  height: 80px; /* fixed height you had earlier */
+  height: 80px;
   width: fit-content;
   max-width: 150px; /* collapsed size */
   transition: max-width 0.6s ease;
@@ -129,7 +129,7 @@ footer {
 
 /* wxpand container on hover */
 #get-started:hover {
-  max-width: 80vw;
+  max-width: 70vw;
 }
 
 /* main icon & label */
@@ -169,17 +169,17 @@ footer {
 }
 
 #get-started .expanded-menu a {
-  color: var(--off-white);
+  padding: 0.8em 1em;
   text-decoration: none;
   font-size: 1rem;
-  background-color: var(--brown);
-  padding: 0.8em 1em;
+  color: var(--off-white);
+  background: linear-gradient(to bottom right, var(--brown), var(--dark-brown));
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
 #get-started .expanded-menu a:hover {
-  transform: translateY(-8%);
+  transform: scale(0.98);
 }
 
 /* ZERO-WASTE-PRINCIPLES STYLES */
@@ -192,7 +192,6 @@ footer {
 #zero-waste-principles .content-wrapper {
   /* toggle settings */
   display: block; /* will change between block & none */
-
   width: 100%;
   height: 100%;
   padding: 2em;
@@ -285,7 +284,13 @@ footer {
   position: relative;
 }
 
+#annual-stats .waste-breakdown .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 30px 30px 32px rgba(0, 0, 0, 0.3);
+}
+
 #annual-stats .waste-breakdown .card h3 {
+  text-align: left;
   font-size: 1.8rem;
   color: var(--dark-green);
 }
@@ -295,6 +300,15 @@ footer {
   font-size: 2.4rem;
   color: #d68b45cf;
   top: 30px; right: 30px;
+}
+
+.card:hover {
+  i { animation: beat 0.6s ease infinite; }
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 /* Bar Chart Section */
@@ -330,6 +344,15 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
+  /* grow from 0 to full height */
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 1s ease-out;
+}
+
+#annual-stats .bar-chart .bar.animate {
+  transform: scaleY(1);
 }
 
 /* Recycling Progress Section */
