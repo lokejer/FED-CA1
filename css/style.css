@@ -51,10 +51,8 @@ html::-webkit-scrollbar body::-webkit-scrollbar {
 	display: none; /* hides scrollbar in Chrome, Edge, Safari */
 }
 
-footer {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: var(--green);
+strong {
+  font-weight: 800;
 }
 
 /* INTRODUCTION STYLES */
@@ -69,7 +67,6 @@ footer {
   background-size: cover;
   background-position: center -920px;
   background-repeat: no-repeat;
-  /* border: 2px solid blue; */
 }
 
 .introduction .overlay {
@@ -110,76 +107,20 @@ footer {
   text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
 }
 
-/* get started button (quick links to important website sections) */
-#get-started {
-  margin: 0.2em;
-  padding: 0.4em 1em;
-  background-color: #713700c5;
-  border-radius: 100px;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  height: 80px;
-  width: fit-content;
-  max-width: 150px; /* collapsed size */
-  transition: max-width 0.6s ease;
-  overflow: hidden;
+.scroll-indicator {
+  position: absolute;
+  width: 26px; height: 26px;
+  bottom: 45px; left: 50%;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  animation: bob 1.5s infinite ease-in-out;
 }
 
-/* wxpand container on hover */
-#get-started:hover {
-  max-width: 70vw;
-}
-
-/* main icon & label */
-#get-started .button-face {
-  display: flex;
-  align-items: center;
-  transition: transform 0.4s ease;
-  flex-shrink: 0;
-}
-
-#get-started span {
-  color: var(--off-white);
-  font-size: 1.3rem;
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-}
-
-#get-started i {
-  translate: -40% 2%;
-  font-size: 2.2rem;
-  color: var(--brown);
-}
-
-/* Expanded links - initially hidden */
-#get-started .expanded-menu {
-  display: flex;
-  gap: 1em;
-  margin-left: 1em;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-#get-started:hover .expanded-menu {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-#get-started .expanded-menu a {
-  padding: 0.8em 1em;
-  text-decoration: none;
-  font-size: 1rem;
-  color: var(--off-white);
-  background: linear-gradient(to bottom right, var(--brown), var(--dark-brown));
-  border-radius: 10px;
-}
-
-#get-started .expanded-menu a:hover {
-  text-decoration: underline;
+@keyframes bob {
+  0%   { transform: translateY(0) rotate(-45deg); opacity: 1; }
+  50%  { transform: translateY(8px) rotate(-45deg); opacity: 0.6; }
+  100% { transform: translateY(0) rotate(-45deg); opacity: 1; }
 }
 
 /* ZERO-WASTE-PRINCIPLES STYLES */
@@ -312,16 +253,27 @@ footer {
 }
 
 /* Bar Chart Section */
-#annual-stats .bar-chart {
+#annual-stats .yearly-waste-output {
   margin-top: 5em;
   text-align: center;
 }
 
+#annual-stats .yearly-waste-output .title-text {
+  margin: 100px 0 2em 0;
+}
+
+#annual-stats .yearly-waste-output .bar-chart {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+}
+
 #annual-stats .bar-chart .chart-wrapper {
+  flex: 0 0 40%; /* take up 40% of the available space */
   margin: 1rem auto;
   padding: 2em 2em 0 2em;
   max-width: 800px;
-  height: 400px;
+  height: 440px;
   background-color: var(--lavender-transparent);
   border: 3px solid var(--golden-yellow);
   border-radius: 20px;
@@ -330,6 +282,22 @@ footer {
   justify-content: space-around;
   align-items: flex-end;
   gap: 0.5rem;
+}
+
+#annual-stats .bar-chart .chart-description {
+  margin: 1em;
+  text-align: left;
+}
+
+#annual-stats .bar-chart .chart-description h3 {
+  color: var(--dark-green);
+  font-size: 1.6rem;
+}
+
+#annual-stats .bar-chart .chart-description p {
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
 }
 
 #annual-stats .bar-chart .bar {
@@ -357,16 +325,16 @@ footer {
 
 /* Recycling Progress Section */
 #annual-stats .recycling-progress {
-  margin-top: 5em;
+  margin: 5em;
   text-align: center;
 }
 
 #annual-stats .recycling-progress .progress-bar-bg {
+  width: 80%; height: 40px;
+  margin: 1em auto;
   background-color: #e0e0e0;
   border-radius: 20px;
-  height: 40px;
-  width: 80%;
-  margin: 1rem auto;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
@@ -384,16 +352,22 @@ footer {
 /* ZERO-WASTE SUCCESS STORIES STYLES */
 #success-stories {
   width: 100vw;
-  padding: 4em;
+  padding: 5em 4em;
+  background-color: var(--dark-beige);
 }
 
 .success-header {
-  margin: 2em;
+  margin: 0 2em 2em 2em;
   text-align: center;
 }
 
+.success-header i {
+  font-size: 3rem; 
+  color: var(--green);
+}
+
 .success-header h3 {
-  margin-top: 1.6em;
+  margin-bottom: 1.6em;
   color: #333;
   font-size: 1.2rem;
   font-weight: 300;

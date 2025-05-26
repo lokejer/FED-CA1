@@ -62,7 +62,9 @@ nav i {
 }
 
 .sidenav {
-  width: 200px;
+  position: sticky;
+  top: 0; left: 0;
+  width: 200px; height: 100vh;
   background-color: var(--charcoal-black);
   background-color: var(--dark-green);
 }
@@ -97,4 +99,115 @@ nav i {
 
 .sidenav a:hover::before {
   transform: scaleX(1);
+}
+
+/* BACK TO TOP BUTTON */
+.back-to-top {
+  padding: 100px;
+  text-align: center;
+}
+
+.back-to-top i { /* add space between arrow and text */
+  margin: 0 0.4em;
+}
+
+.back-to-top a {
+  text-decoration: none;
+  padding: 1em 3em;
+  background-color: var(--green); /* or your primary theme color */
+  color: var(--off-white);
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top a:hover {
+  background-color: var(--dark-green); /* or a darker shade */
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding: 0 2em;
+  background-color: #1e3932; /* deep green */
+  color: var(--off-white);
+}
+
+.footer-content {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.quick-links { /* center the items in footer */
+  display: flex;
+  align-items: center;
+}
+
+.quick-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.quick-links a {
+  padding: 0.6em 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--off-white);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.1s ease;
+}
+
+/* PSEUDO-CLASS for underline effect */
+.quick-links a::before {
+  content: '';
+  position: absolute;
+  width: 100%; height: 2px;
+  left: 0; bottom: 5px;
+  background: linear-gradient(to right, var(--off-white), var(--dark-green));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-in-out;
+}
+
+.quick-links a:hover {
+  color: #a0d6aa;
+}
+
+.quick-links a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Social Media icons */
+.contact ul {
+  margin: 0 2em;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.contact i {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--off-white);
+  transition: color 0.1s ease, transform 0.1s ease;
+}
+
+.contact i:hover {
+  color: var(--green);
+  transform: scale(0.95);
+}
+
+.footer-bottom {
+  width: 40vw;
+  padding: 1em;
+  margin: 0 auto; /* center */
+  border-top: 1px solid #4f665c;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
 }

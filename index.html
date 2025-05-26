@@ -19,7 +19,7 @@
   <main>
       
     <!-- COVER PAGE -->
-    <section class="introduction">
+    <section class="introduction" id="top">
       <div class="overlay"></div>
       
       <!-- INTEGRATED NAVBAR (blends with cover image) -->
@@ -39,93 +39,80 @@
 
       <header class="title-text">
         <h1>Start Leading a Zero-Waste Lifestyle!</h1>
-
-        <div id="get-started">
-
-          <div class="button-face">
-            <i class="fa-solid fa-play"></i><span>START</span>
-          </div>
-
-          <div class="expanded-menu">
-            <a href="#zero-waste-principles">Learn More</a>
-            <a href="stories.html">Success Stories</a>
-            <a href="about.html">My Mission</a>
-          </div>
-
-        </div>
-
       </header>
+
+      <div class="scroll-indicator"></div>
 
     </section>
 
     <!-- ---------------------------------------------------------------------------------- -->
 
     <section id="zero-waste-principles">
+      
+      <aside class="sidenav">
+        <ul>
+          <li>
+            <a href="#zero-waste-principles">
+              <i class="fa-solid fa-recycle"></i>
+              ZW Principles
+            </a>
+          </li>
+          <li>
+            <a href="#annual-stats">
+              <i class="fa-solid fa-chart-column"></i>
+              Annual Waste
+            </a>
+          </li>
+          <li>
+            <a href="#success-stories">
+              <i class="fa-solid fa-star"></i>
+              Success Stories
+            </a>
+          </li>
+        </ul>
+      </aside>
+  
+      <div class="content-wrapper">
 
-    <aside class="sidenav">
-      <ul>
-        <li>
-          <a href="#zero-waste-principles">
-            <i class="fa-solid fa-recycle"></i>
-            ZW Principles
-          </a>
-        </li>
-        <li>
-          <a href="#annual-stats">
-            <i class="fa-solid fa-chart-column"></i>
-            Annual Waste
-          </a>
-        </li>
-        <li>
-          <a href="#success-stories">
-            <i class="fa-solid fa-star"></i>
-            Success Stories
-          </a>
-        </li>
-      </ul>
-    </aside>
+        <header class="title-text"><h1>Zero Waste Principles</h1></header>
 
-    <div class="content-wrapper">
+          <div class="card-container">
 
-      <header class="title-text"><h1>Zero Waste Principles</h1></header>
+            <article class="card">
+              <img width="150px" height="150px" src="assets/4R-icons/refuse_icon.png" alt="Refuse">
+              <div class="card-content">
+                <h3>Refuse</h3>
+                <p><i>Say no to things you don't truly need</i></p>
+              </div>  
+            </article>
 
-        <div class="card-container">
+            <article class="card">
+              <img width="150px" height="150px" src="assets/4R-icons/reduce_icon.png" alt="Reduce">
+              <div class="card-content">
+                <h3>Reduce</h3>
+                <p><i>Buy and use less to minimise waste</i></p>
+              </div>  
+            </article>
 
-          <article class="card">
-            <img width="150px" height="150px" src="assets/4R-icons/refuse_icon.png" alt="Refuse">
-            <div class="card-content">
-              <h3>Refuse</h3>
-              <p><i>Say no to things you don't truly need</i></p>
-            </div>  
-          </article>
+            <article class="card">
+              <img width="150px" height="150px" src="assets/4R-icons/reuse_icon.png" alt="Reuse">
+              <div class="card-content">
+                <h3>Reuse</h3>
+                <p><i>Find new purposes for old/unwanted things</i></p>
+              </div>  
+            </article>
 
-          <article class="card">
-            <img width="150px" height="150px" src="assets/4R-icons/reduce_icon.png" alt="Reduce">
-            <div class="card-content">
-              <h3>Reduce</h3>
-              <p><i>Buy and use less to minimise waste</i></p>
-            </div>  
-          </article>
+            <article class="card">
+              <img width="150px" height="150px" src="assets/4R-icons/recycle_icon.png" alt="Recycle">
+              <div class="card-content">
+                <h3>Recycle</h3>
+                <p><i>Sort your trash and throw in the blue recycle bins</i></p>
+              </div>  
+            </article>
 
-          <article class="card">
-            <img width="150px" height="150px" src="assets/4R-icons/reuse_icon.png" alt="Reuse">
-            <div class="card-content">
-              <h3>Reuse</h3>
-              <p><i>Find new purposes for old/unwanted things</i></p>
-            </div>  
-          </article>
-
-          <article class="card">
-            <img width="150px" height="150px" src="assets/4R-icons/recycle_icon.png" alt="Recycle">
-            <div class="card-content">
-              <h3>Recycle</h3>
-              <p><i>Sort your trash and throw in the blue recycle bins</i></p>
-            </div>  
-          </article>
+          </div>
 
         </div>
-
-      </div>
 
     </section>
 
@@ -183,17 +170,48 @@
       </div>
 
       <!-- Bar Chart -->
-      <section class="bar-chart">
+      <section class="yearly-waste-output">
         <header class="title-text"><h1>Yearly Waste Output</h1></header>
-        <div class="chart-wrapper">
-          <div class="bar" style="height: 70%">2025</div>
-          <div class="bar" style="height: 60%">2024</div>
-          <div class="bar" style="height: 75%">2023</div>
-          <div class="bar" style="height: 65%">2022</div>
-          <div class="bar" style="height: 80%">2021</div>
-          <div class="bar" style="height: 90%">2020</div>
-        </div>
+        
+        <article class="bar-chart">
+
+          <div class="chart-wrapper">
+            <div class="bar" style="height: 61%">2025</div>
+            <div class="bar" style="height: 69%">2024</div>
+            <div class="bar" style="height: 88%">2023</div>
+            <div class="bar" style="height: 76%">2022</div>
+            <div class="bar" style="height: 93%">2021</div>
+            <div class="bar" style="height: 100%">2020</div>
+          </div>
+
+          <div class="chart-description">
+            <h3 class="green-header">📉 A Positive Downward Trend</h3>
+            <p>
+              Over the past five years, Singapore has seen a steady decline in yearly household waste output. 
+              This consistent reduction—from 1.88 million tonnes in 2020 to a projected 1.15 million tonnes in 2025—
+              highlights the nation's growing commitment to sustainable practices and zero waste targets.
+            </p>
+      
+            <h3 class="green-header">♻️ Policies & Behaviour Change</h3>
+            <p>
+              Key initiatives such as mandatory waste reporting for large premises, nationwide recycling efforts, 
+              and increased public education have helped reduce overall waste generation. Households are also more aware, 
+              contributing actively through better sorting and reducing food waste.
+            </p>
+      
+            <h3 class="green-header">🚀 Towards Zero Waste</h3>
+            <p>
+              With continued innovation and community effort, Singapore is on track to achieve its vision of 
+              becoming a Zero Waste Nation. The projected 2025 figure is a testament to policy effectiveness 
+              and the collective action of individuals and industries alike.
+            </p>
+          </div>
+
+        </article>
+
       </section>
+
+      <hr style="border: 1px solid var(--beige)"> <!-- ---------------------------------------------------------------------------------- -->
 
       <!-- Recycling Progress Bar -->
       <div class="recycling-progress">
@@ -204,20 +222,18 @@
         <p><em>let's aim for 70% by 2030!</em></p>
       </div>
 
+      
     </section>
     
-    <hr style="border: 1px solid var(--beige)"> <!-- ---------------------------------------------------------------------------------- -->
+    <hr style="border: 1px solid var(--dark-beige)"> <!-- ---------------------------------------------------------------------------------- -->
     
     <section id="success-stories">
       
       <div class="success-header">
   
-        <i style="font-size: 3rem; color: var(--green)" class="fa-solid fa-clover"></i>
-  
-        <h3>Be Inspired!</h3>
-        <div class="title-text">
-          <h1>Zero-Waste Warriors</h1>
-        </div>
+        <i class="fa-solid fa-clover"></i>
+        <header class="title-text"><h1>Zero-Waste Warriors</h1></header>
+        <h3><strong>Be Inspired</strong> by these successful zero-waste communities!</h3>
   
       </div>
 
@@ -251,8 +267,43 @@
         </a>
 
       </div>
-      
+        
     </section>
+
+    <!-- Back to Top Button -->
+    <section class="back-to-top">
+      <div class="back-to-top-btn">
+        <a href="#top"><i class="fa-solid fa-arrow-up"></i>Back to Top</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+
+      <div class="footer-content">        
+        <div class="quick-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="goals.html">Goals</a></li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <ul>
+            <!-- email -->
+            <li><a href="mailto:lokejer@gmail.com?subject=Hello!"><i class="fa-solid fa-envelope"></i></a></li>
+
+            <!-- instagram -->
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Zero Waste Project. All rights reserved.</p>
+      </div>
+      
+    </footer>    
 
   </main>
 
