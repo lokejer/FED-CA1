@@ -13,7 +13,7 @@ main::before {
 	z-index: -10;
   
 	/* whole page's background image */
-	background-image: url("../assets/paper\ BG.png");
+	background-image: url("../assets/paper-BG.png");
 	background-size: cover;
 	background-position: center -920px;
 	background-repeat: repeat-y;
@@ -97,3 +97,9 @@ main::before {
   transition: opacity 0.3s ease;
 }
 .image-wrapper:hover .overlay { opacity: 1; }
+
+.highlight-yellow {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--golden-yellow);
+}
