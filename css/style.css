@@ -77,10 +77,6 @@ strong {
   z-index: 1;
 }
 
-/* !! problem
- .title-text overflows into #zero-waste-principles and i cant find out why :( 
- i've manually fixed this by setting height to 80%.
-*/
 .introduction .title-text {  
   margin-top: 1em;
   width: 100%;
@@ -108,6 +104,28 @@ strong {
   text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
 }
 
+.introduction .title-text p {
+  margin-top: 0.4em;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+}
+
+.introduction .title-text strong {
+  color: var(--brown);
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  background: linear-gradient(
+    to bottom right, 
+    var(--dark-beige),
+    var(--golden-yellow));
+  background-clip: text;
+  -webkit-background-clip: text;  /* ensure compatibility on Chrome, Safari, Edge */
+  color: transparent;
+  text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
+}
+
 .scroll-indicator {
   position: absolute;
   width: 26px; height: 26px;
@@ -127,7 +145,6 @@ strong {
 /* ZERO-WASTE-PRINCIPLES STYLES */
 #zero-waste-principles {
   width: 100vw;
-  height: 150vh;
   display: flex; /* layout for sidenav and content */
 }
 
@@ -137,6 +154,7 @@ strong {
   width: 100%;
   height: 100%;
   padding: 2em;
+
 }
 
 #zero-waste-principles .title-text h1 {
@@ -155,24 +173,35 @@ strong {
 }
 
 #zero-waste-principles .card {
-  width: 100%;
-  margin: 1em 0.4em;
-  /* padding: 1em; */
-  border: 1.6px solid var(--charcoal-black);
-  border-radius: 25px;
+  width: 95%;
+  margin: 2em 0.4em;
+  padding: 1em 1em 1em 0; /* padding on all sides except left side */
+  background-color: var(--dark-beige);
   color: var(--charcoal-black);
+  border-bottom: 2px solid var(--golden-yellow-transparent);
+  border-radius: 25px;
+  box-shadow: 5px 5px 32px rgba(0, 0, 0, 0.2);
 
   display: flex;
   align-items: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#zero-waste-principles .card .card-content {
-  padding: 0 0.6em;
-  translate: -5%;
+#zero-waste-principles .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 32px var(--golden-yellow-transparent);
 }
 
+/* titles for Refuse, Reuse etc */
 #zero-waste-principles .card .card-content h3 {
+  color: var(--dark-brown);
   font-size: 1.7rem;
+}
+
+#zero-waste-principles .card .card-content h4 {
+  margin-bottom: 0.4em; /* increase spacing between this and the example */
+  font-weight: 600;
 }
 
 /* ANNUAL STATISTICS STYLES */
@@ -244,11 +273,13 @@ strong {
   top: 30px; right: 30px;
 }
 
-.card:hover i { animation: beat 0.6s ease infinite; }
+.card:hover i { 
+  animation: beat 0.6s ease infinite; 
+}
 
 @keyframes beat {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(1.2); }
 }
 
 /* Bar Chart Section */
@@ -272,7 +303,7 @@ strong {
   margin: 1rem auto;
   padding: 2em 2em 0 2em;
   max-width: 800px;
-  height: 440px;
+  height: 550px;
   background-color: var(--lavender-transparent);
   border: 3px solid var(--golden-yellow);
   border-radius: 20px;
@@ -338,7 +369,7 @@ strong {
 }
 
 #annual-stats .recycling-progress .progress-bar-fill {
-  width: 56%; height: 100%;
+  width: 46%; height: 100%;
   padding-left: 1em;
   font-size: 1.2rem;
   background-color: var(--green);
