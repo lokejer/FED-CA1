@@ -4,43 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Poppins font link -->
+  <!-- font imports -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
   
+  <!-- css stylesheets -->
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>CA1 | Home Page</title>
+  <title>Zero-Waste Website | Home</title>
 
-  <!-- FontAwesome link -->
+  <!-- font awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   
   <main>
       
-    <!-- COVER PAGE -->
+    <!-- hero section with background image -->
     <section class="introduction" id="top">
+      <!-- dark overlay for text readability -->
       <div class="overlay"></div>
       
-      <!-- INTEGRATED NAVBAR (blends with cover image) -->
+      <!-- navigation bar integrated with hero -->
       <header>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="goals.html">Goals</a></li>
-            <!-- <li><a href="/"><i class="fa-solid fa-house"></i></a></li> -->
-            <!-- <li><a href="about.html"><i class="fa-solid fa-circle-info"></i></a></li> -->
-            <!-- <li><a href="goals.html"><i class="fa-solid fa-bullseye"></i></a></li> -->
           </ul>
         </nav>
         <hr style="border: 1px solid var(--beige)">
       </header>
 
+      <!-- main title and subtitle -->
       <header class="title-text">
-        <div class="icon-container">
-          <!-- <i class="fa-solid fa-clover" style="color: var(--dark-green); font-size: 36px;"></i> -->
-        </div>
+        <!-- optional icon container (commented out) -->
+        <!-- <div class="icon-container">
+          <i class="fa-solid fa-clover" style="color: var(--dark-green); font-size: 36px;"></i>
+        </div> -->
 
         <h1>Start Leading a Zero-Waste Lifestyle!</h1>
 
@@ -49,14 +50,15 @@
         </em></p>
       </header>
 
+      <!-- animated scroll indicator -->
       <div class="scroll-indicator"></div>
 
     </section>
 
-    <!-- ================================  NEW SECTION ================================ -->
-
+    <!-- zero waste principles section -->
     <section id="zero-waste-principles">
       
+      <!-- side navigation menu -->
       <aside class="sidenav">
         <ul>
           <li>
@@ -80,14 +82,17 @@
         </ul>
       </aside>
   
+      <!-- main content area -->
       <div class="content-wrapper">
 
+        <!-- section heading -->
         <header class="title-text"><h1>Zero Waste Principles</h1></header>
 
           <div class="card-container">
 
+            <!-- refuse principle card -->
             <article class="card">
-              <img width="150" height="150" src="assets/4R-icons/refuse_icon.png" alt="Refuse">
+              <img width="150" height="150" src="assets/5R-icons/refuse_icon.png" alt="Refuse">
               <div class="card-content">
                 <h3>Refuse</h3>
                 <h4><i>&raquo; Say no to things you don't truly need &laquo;</i></h4>
@@ -95,8 +100,9 @@
               </div>
             </article>
 
+            <!-- reduce principle card -->
             <article class="card">
-              <img width="150" height="150" src="assets/4R-icons/reduce_icon.png" alt="Reduce">
+              <img width="150" height="150" src="assets/5R-icons/reduce_icon.png" alt="Reduce">
               <div class="card-content">
                 <h3>Reduce</h3>
                 <h4><i>&raquo; Buy and use less to minimise waste &laquo;</i></h4>
@@ -104,8 +110,9 @@
               </div>  
             </article>
 
+            <!-- reuse principle card -->
             <article class="card">
-              <img width="150" height="150" src="assets/4R-icons/reuse_icon.png" alt="Reuse">
+              <img width="150" height="150" src="assets/5R-icons/reuse_icon.png" alt="Reuse">
               <div class="card-content">
                 <h3>Reuse</h3>
                 <h4><i>&raquo; Find new purposes for old/unwanted things &laquo;</i></h4>
@@ -113,8 +120,9 @@
               </div>  
             </article>
 
+            <!-- recycle principle card -->
             <article class="card">
-              <img width="150" height="150" src="assets/4R-icons/recycle_icon.png" alt="Recycle">
+              <img width="150" height="150" src="assets/5R-icons/recycle_icon.png" alt="Recycle">
               <div class="card-content">
                 <h3>Recycle</h3>
                 <h4><i>&raquo; Take the extra step - Sort your trash! &laquo;</i></h4>
@@ -122,8 +130,9 @@
               </div>  
             </article>
 
+            <!-- composting principle card -->
             <article class="card">
-              <img style="transform: scale(0.7);" width="150" height="150" src="assets/4R-icons/composting_icon.png" alt="Compost">
+              <img style="transform: scale(0.7);" width="150" height="150" src="assets/5R-icons/composting_icon.png" alt="Compost">
               <div class="card-content">
                 <h3>Composting</h3>
                 <h4><i>&raquo; Return nutrients to the Earth. &laquo;</i></h4>
@@ -137,16 +146,16 @@
 
     </section>
 
-    <!-- ================================  NEW SECTION ================================ -->
-
+    <!-- annual statistics section -->
     <section id="annual-stats">
 
-      <!-- Waste Breakdown by Category -->
+      <!-- waste breakdown by category -->
       <div class="waste-breakdown">
         <header class="title-text"><h1>the average person produces...</h1></header>
         <p><em>(per annum)</em></p>
         <div class="card-container">
 
+          <!-- food waste card -->
           <article class="card">
             <div class="content-wrapper">
               <i class="fa-solid fa-utensils"></i>
@@ -155,6 +164,7 @@
             </div>
           </article>
 
+          <!-- packaging waste card -->
           <article class="card">
             <div class="content-wrapper">
               <i class="fa-solid fa-box-open"></i>
@@ -163,6 +173,7 @@
             </div>
           </article>
 
+          <!-- plastic waste card -->
           <article class="card">
             <div class="content-wrapper">
               <i class="fa-solid fa-trash"></i>
@@ -171,6 +182,7 @@
             </div>
           </article>
 
+          <!-- paper waste card -->
           <article class="card">
             <div class="content-wrapper">
               <i class="fa-solid fa-scroll"></i>
@@ -179,6 +191,7 @@
             </div>
           </article>
 
+          <!-- miscellaneous waste card -->
           <article class="card">
             <div class="content-wrapper">
               <i class="fa-solid fa-question-circle"></i>
@@ -190,9 +203,10 @@
         </div>
       </div>
 
-      <!-- Bar Chart -->
+      <!-- yearly waste output with bar chart -->
       <section class="yearly-waste-output">
 
+        <!-- note: h1 accessibility warning from original code -->
         <!--
           Warning: Consider using the h1 element as a top-level heading only 
           (all h1 elements are treated as top-level headings by many screen readers and other tools).
@@ -201,8 +215,10 @@
 
         <header class="title-text"><h1>Yearly Waste Output</h1></header>
         
+        <!-- bar chart with description -->
         <article class="bar-chart">
 
+          <!-- chart bars container -->
           <div class="chart-wrapper">
             <div class="bar" style="height: 100%">2020</div>
             <div class="bar" style="height: 93%">2021</div>
@@ -212,6 +228,7 @@
             <div class="bar" style="height: 51%">2025</div>
           </div>
 
+          <!-- chart explanation text -->
           <div class="chart-description">
             <h3 class="green-header">📉 A Positive Downward Trend</h3>
             <p>
@@ -239,9 +256,10 @@
 
       </section>
 
-      <hr style="border: 1px solid var(--beige)"> <!-- ================================  NEW SECTION ================================ -->
+      <!-- section divider -->
+      <hr style="border: 1px solid var(--beige)">
 
-      <!-- Recycling Progress Bar -->
+      <!-- recycling progress bar -->
       <div class="recycling-progress">
         <header class="title-text"><h1>Recycling Goal Progress</h1></header>
         <div class="progress-bar-bg">
@@ -253,10 +271,13 @@
       
     </section>
     
-    <hr style="border: 1px solid var(--dark-beige)"> <!-- ================================  NEW SECTION ================================ -->
+    <!-- section divider -->
+    <hr style="border: 1px solid var(--dark-beige)">
     
+    <!-- success stories section -->
     <section id="success-stories">
       
+      <!-- section header -->
       <div class="success-header">
   
         <i class="fa-solid fa-clover"></i>
@@ -265,8 +286,10 @@
   
       </div>
 
+      <!-- polaroid-style photo gallery -->
       <div class="success-polaroids">
 
+        <!-- story 1: nada grocery -->
         <a href="stories.html" class="polaroid-link">
           <div class="polaroid">
             <figure>
@@ -276,6 +299,7 @@
           </div>
         </a>
 
+        <!-- story 2: unpackaged uk -->
         <a href="stories.html" class="polaroid-link">
           <div class="polaroid">
             <figure>
@@ -285,6 +309,7 @@
           </div>
         </a>
 
+        <!-- story 3: kamikatsu japan -->
         <a href="stories.html" class="polaroid-link">
           <div class="polaroid">
             <figure>
@@ -298,16 +323,19 @@
         
     </section>
 
-    <!-- Back to Top Button -->
+    <!-- back to top button -->
     <div class="back-to-top">
       <div class="back-to-top-btn">
         <a href="#top"><i class="fa-solid fa-arrow-up"></i>Back to Top</a>
       </div>
     </div>
 
+    <!-- site footer -->
     <footer class="site-footer">
 
+      <!-- footer content -->
       <div class="footer-content">        
+        <!-- quick navigation links -->
         <div class="quick-links">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -316,17 +344,19 @@
           </ul>
         </div>
 
+        <!-- contact/social links -->
         <div class="contact">
           <ul>
-            <!-- email -->
+            <!-- email link -->
             <li><a href="mailto:lokejer@gmail.com?subject=Hello!"><i class="fa-solid fa-envelope"></i></a></li>
 
-            <!-- instagram -->
+            <!-- instagram link -->
             <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>
 
+      <!-- copyright notice -->
       <div class="footer-bottom">
         <p>© 2025 Zero Waste Project. All rights reserved.</p>
       </div>
@@ -335,6 +365,7 @@
 
   </main>
 
+  <!-- javascript -->
   <script src="js/script.js"></script>
 </body>
 </html>

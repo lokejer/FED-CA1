@@ -1,11 +1,12 @@
+/* font imports */
 /* Poppins, sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Montserrat, sans-serif, 400 (recommended) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* css variables for consistent colors */
 :root {
-
   /* accent colours */
   --green: #4c956c;
   --dark-green: #2c6e49;
@@ -25,7 +26,7 @@
   --dark-beige: #e9e9cd;
 }
 
-/* BASE STYLES */
+/* reset and base styling */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -39,24 +40,24 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* hide scrollbar while keeping functionality */
 html,
 body {
-	/* hide scrollbar while still enabling scrolling */
   overflow-x: hidden;
 	overflow-y: scroll;
-	scrollbar-width: none; /* hides scrollbar in Firefox */
+	scrollbar-width: none; /* firefox */
 }
 
 html::-webkit-scrollbar body::-webkit-scrollbar {
-	display: none; /* hides scrollbar in Chrome, Edge, Safari */
+	display: none; /* chrome, edge, safari */
 }
 
+/* bold text styling */
 strong {
   font-weight: 800;
 }
 
-/* INTRODUCTION STYLES */
-
+/* hero section with background image */
 .introduction {
   position: relative;
   width: 100vw;
@@ -69,20 +70,22 @@ strong {
   background-repeat: no-repeat;
 }
 
+/* dark overlay for better text readability */
 .introduction .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* dims the background image */
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
+/* main title section */
 .introduction .title-text {  
   margin-top: 1em;
   width: 100%;
   height: 80%;
   text-align: center;
-  font-size: 2rem; /* fills .title-text with content so z-index works */
+  font-size: 2rem;
   
   display: flex;
   flex-direction: column;
@@ -90,20 +93,22 @@ strong {
   align-items: center;
 
   position: relative;
-  z-index: 10; /* put title-text above the overlay to prevent unwanted dimming of h1 */
+  z-index: 10; /* above overlay */
 }
 
+/* gradient text for main heading */
 .introduction .title-text h1 {
   background: linear-gradient(
   to bottom right, 
   var(--dark-green),
   var(--green));
   background-clip: text;
-  -webkit-background-clip: text;  /* ensure compatibility on Chrome, Safari, Edge */
+  -webkit-background-clip: text;  /* webkit compatibility */
   color: transparent;
   text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
 }
 
+/* subtitle paragraph */
 .introduction .title-text p {
   margin-top: 0.4em;
   color: white;
@@ -111,6 +116,7 @@ strong {
   font-size: 1.15rem;
 }
 
+/* emphasized text with gradient */
 .introduction .title-text strong {
   color: var(--brown);
   font-size: 1.6rem;
@@ -121,11 +127,12 @@ strong {
     var(--dark-beige),
     var(--golden-yellow));
   background-clip: text;
-  -webkit-background-clip: text;  /* ensure compatibility on Chrome, Safari, Edge */
+  -webkit-background-clip: text;  /* webkit compatibility */
   color: transparent;
   text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
 }
 
+/* animated scroll indicator arrow */
 .scroll-indicator {
   position: absolute;
   width: 26px; height: 26px;
@@ -136,34 +143,37 @@ strong {
   animation: bob 1.5s infinite ease-in-out;
 }
 
+/* bounce animation for scroll arrow */
 @keyframes bob {
   0%   { transform: translateY(0) rotate(-45deg); opacity: 1; }
   50%  { transform: translateY(8px) rotate(-45deg); opacity: 0.6; }
   100% { transform: translateY(0) rotate(-45deg); opacity: 1; }
 }
 
-/* ZERO-WASTE-PRINCIPLES STYLES */
+/* zero waste principles section */
 #zero-waste-principles {
   width: 100vw;
   display: flex; /* layout for sidenav and content */
 }
 
+/* main content area */
 #zero-waste-principles .content-wrapper {
   /* toggle settings */
   display: block; /* will change between block & none */
   width: 100%;
   height: 100%;
   padding: 2em;
-
 }
 
+/* section title */
 #zero-waste-principles .title-text h1 {
   font-size: 3rem;
   margin-bottom: 1em;
   text-align: left;
-  position: relative; /* to position the brown underline element */
+  position: relative; /* for underline positioning */
 }
 
+/* decorative underline */
 #zero-waste-principles .title-text h1::after {
   content: '';
   position: absolute;
@@ -172,10 +182,11 @@ strong {
   background-color: var(--brown);
 }
 
+/* principle cards */
 #zero-waste-principles .card {
   width: 95%;
   margin: 2em 0.4em;
-  padding: 1em 1em 1em 0; /* padding on all sides except left side */
+  padding: 1em 1em 1em 0; /* no left padding */
   background-color: var(--dark-beige);
   color: var(--charcoal-black);
   border-bottom: 2px solid var(--golden-yellow-transparent);
@@ -188,27 +199,30 @@ strong {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* card hover effects */
 #zero-waste-principles .card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 0px 32px var(--golden-yellow-transparent);
 }
 
-/* titles for Refuse, Reuse etc */
+/* card titles (refuse, reuse, etc) */
 #zero-waste-principles .card .card-content h3 {
   color: var(--dark-brown);
   font-size: 1.7rem;
 }
 
+/* card subtitles */
 #zero-waste-principles .card .card-content h4 {
-  margin-bottom: 0.4em; /* increase spacing between this and the example */
+  margin-bottom: 0.4em;
   font-weight: 600;
 }
 
-/* ANNUAL STATISTICS STYLES */
+/* statistics section */
 #annual-stats {
   padding: 2em;
 }
 
+/* stats section title with gradient */
 #annual-stats .title-text h1 {
   font-size: 2.5rem;
   background: linear-gradient(
@@ -220,12 +234,13 @@ strong {
     text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
 }
 
-/* Waste Breakdown Section */
+/* waste breakdown subsection */
 #annual-stats .waste-breakdown {
   margin-top: 5em;
   text-align: center;
 }
 
+/* container for waste breakdown cards */
 #annual-stats .waste-breakdown .card-container {
   width: 100%;
   padding: 2em 5em;
@@ -236,6 +251,7 @@ strong {
   gap: 2rem;
 }
 
+/* individual waste type cards */
 #annual-stats .waste-breakdown .card {
   flex-grow: 1;
 
@@ -255,17 +271,20 @@ strong {
   position: relative;
 }
 
+/* card hover animation */
 #annual-stats .waste-breakdown .card:hover {
   transform: translateY(-4px);
   box-shadow: 30px 30px 32px rgba(0, 0, 0, 0.3);
 }
 
+/* waste amount numbers */
 #annual-stats .waste-breakdown .card h3 {
   text-align: left;
   font-size: 1.8rem;
   color: var(--dark-green);
 }
 
+/* card icons */
 #annual-stats .waste-breakdown .card i {
   position: absolute;
   font-size: 2.4rem;
@@ -273,33 +292,38 @@ strong {
   top: 30px; right: 30px;
 }
 
+/* icon animation on card hover */
 .card:hover i { 
   animation: beat 0.6s ease infinite; 
 }
 
+/* heartbeat animation for icons */
 @keyframes beat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.2); }
 }
 
-/* Bar Chart Section */
+/* yearly waste output section */
 #annual-stats .yearly-waste-output {
   margin-top: 5em;
   text-align: center;
 }
 
+/* bar chart section title */
 #annual-stats .yearly-waste-output .title-text {
   margin: 100px 0 2em 0;
 }
 
+/* bar chart container */
 #annual-stats .yearly-waste-output .bar-chart {
   display: flex;
   align-items: flex-start;
   gap: 1em;
 }
 
+/* chart wrapper with bars */
 #annual-stats .bar-chart .chart-wrapper {
-  flex: 0 0 40%; /* take up 40% of the available space */
+  flex: 0 0 40%; /* 40% width */
   margin: 1rem auto;
   padding: 2em 2em 0 2em;
   max-width: 800px;
@@ -314,22 +338,26 @@ strong {
   gap: 0.5rem;
 }
 
+/* chart description text */
 #annual-stats .bar-chart .chart-description {
   margin: 1em;
   text-align: left;
 }
 
+/* description headings */
 #annual-stats .bar-chart .chart-description h3 {
   color: var(--dark-green);
   font-size: 1.6rem;
 }
 
+/* description paragraphs */
 #annual-stats .bar-chart .chart-description p {
   margin-bottom: 15px;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.8;
 }
 
+/* individual bars in chart */
 #annual-stats .bar-chart .bar {
   width: 80px;
   background-color: var(--dark-green);
@@ -343,22 +371,24 @@ strong {
   align-items: flex-end;
   justify-content: center;
 
-  /* grow from 0 to full height */
+  /* animation setup - grow from bottom */
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 1s ease-out;
 }
 
+/* animate bars when visible */
 #annual-stats .bar-chart .bar.animate {
   transform: scaleY(1);
 }
 
-/* Recycling Progress Section */
+/* recycling progress section */
 #annual-stats .recycling-progress {
   margin: 5em;
   text-align: center;
 }
 
+/* progress bar background */
 #annual-stats .recycling-progress .progress-bar-bg {
   width: 80%; height: 40px;
   margin: 1em auto;
@@ -368,6 +398,7 @@ strong {
   overflow: hidden;
 }
 
+/* progress bar fill */
 #annual-stats .recycling-progress .progress-bar-fill {
   width: 46%; height: 100%;
   padding-left: 1em;
@@ -379,23 +410,26 @@ strong {
   align-items: center;
 }
 
-/* ZERO-WASTE SUCCESS STORIES STYLES */
+/* success stories section */
 #success-stories {
   width: 100vw;
   padding: 5em 4em;
   background-color: var(--dark-beige);
 }
 
+/* success stories header */
 .success-header {
   margin: 0 2em 2em 2em;
   text-align: center;
 }
 
+/* header icon */
 .success-header i {
   font-size: 3rem; 
   color: var(--green);
 }
 
+/* header subtitle */
 .success-header h3 {
   margin-bottom: 1.6em;
   color: #333;
@@ -403,11 +437,13 @@ strong {
   font-weight: 300;
 }
 
+/* header main title */
 .success-header .title-text {
   font-size: 2rem;
   color: var(--dark-green);
 }
 
+/* polaroid photos container */
 #success-stories .success-polaroids {
   width: 100%;
   display: flex;
@@ -416,8 +452,10 @@ strong {
   flex-wrap: wrap;
 }
 
+/* remove link styling */
 .polaroid-link { text-decoration: none; }
 
+/* polaroid images */
 #success-stories .polaroid figure img {
   width: 100%;
   object-fit: cover;
@@ -425,21 +463,23 @@ strong {
   filter: brightness(80%);
 }
 
+/* polaroid frame styling */
 #success-stories .polaroid figure {
   padding: 10px;
   width: 300px;
-  /* background: linear-gradient(to bottom right, var(--lavender), var(--lavender-transparent)); */
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  transform: rotate(-2deg);
+  transform: rotate(-2deg); /* slight tilt */
   transition: transform 0.3s ease;
 }  
 
+/* straighten and scale on hover */
 #success-stories .polaroid figure:hover {
   transform: rotate(0deg) scale(1.02);
 }  
 
+/* polaroid captions */
 #success-stories figcaption {
   font-size: 1.2rem;
   font-weight: bold;
@@ -449,7 +489,7 @@ strong {
   transition: opacity 0.3s ease;
 }
 
-/* fade-in text */
+/* fade in caption on hover */
 #success-stories .polaroid:hover figcaption {
   opacity: 1;
 }
