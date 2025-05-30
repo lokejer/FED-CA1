@@ -13,7 +13,7 @@ main::before {
 	z-index: -10;
   
 	/* whole page's background image */
-	background-image: url("../assets/paper-BG.png");
+	background-image: url("../assets/success-stories/gallery/paper-BG.png");
 	background-size: cover;
 	background-position: center -920px;
 	background-repeat: repeat-y;

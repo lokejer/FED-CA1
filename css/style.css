@@ -40,17 +40,20 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* hide scrollbar while keeping functionality */
+/* hide scrollbar while enabling scrolling */
 html,
 body {
   overflow-x: hidden;
-	overflow-y: scroll;
-	scrollbar-width: none; /* firefox */
+  overflow-y: scroll;
+  scrollbar-width: none; /* for compatibility with Firefox (hide scrollbar) */
+  scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar body::-webkit-scrollbar {
-	display: none; /* chrome, edge, safari */
+/* hide scrollbar everywhere EXCEPT about.html */
+body:not(.about-page)::-webkit-scrollbar {
+  display: none;
 }
+body.about-page { scrollbar-width: auto; } /* for compatibility with Firefox (show scrollbar) */
 
 /* bold text styling */
 strong {
@@ -198,9 +201,10 @@ strong {
 }
 
 /* card titles (refuse, reuse, etc) */
-#zero-waste-principles .card .card-content h3 {
+#zero-waste-principles .card .card-content dl dt {
   color: var(--dark-brown);
   font-size: 1.7rem;
+  font-weight: bold;
 }
 
 /* card subtitles */
@@ -484,4 +488,14 @@ strong {
 /* fade in caption on hover */
 #success-stories .polaroid:hover figcaption {
   opacity: 1;
+}
+
+#success-stories #click-the-polaroids {
+  opacity: 0;
+  animation: fade-in-out 3s ease-in-out infinite;
+}
+
+@keyframes fade-in-out {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
