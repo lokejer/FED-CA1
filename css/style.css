@@ -132,24 +132,6 @@ strong {
   text-shadow: 0 0 20px hsla(250, 100%, 70%, 0.1);
 }
 
-/* animated scroll indicator arrow */
-.scroll-indicator {
-  position: absolute;
-  width: 26px; height: 26px;
-  bottom: 45px; left: 50%;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
-  transform: rotate(-45deg);
-  animation: bob 1.5s infinite ease-in-out;
-}
-
-/* bounce animation for scroll arrow */
-@keyframes bob {
-  0%   { transform: translateY(0) rotate(-45deg); opacity: 1; }
-  50%  { transform: translateY(8px) rotate(-45deg); opacity: 0.6; }
-  100% { transform: translateY(0) rotate(-45deg); opacity: 1; }
-}
-
 /* zero waste principles section */
 #zero-waste-principles {
   width: 100vw;

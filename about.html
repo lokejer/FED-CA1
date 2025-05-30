@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="icon" href="assets/favicon/zero-waste-icon.png" type="image/x-icon">
   <title>Zero-Waste Website | About Me</title>
 
   <!-- FontAwesome link -->
@@ -34,9 +35,15 @@
     <section class="about-section clear-fix">
       
       <figure class="profile">
-        <img src="assets/profile.jpg" alt="Girl holding a plant">
+        <img 
+          src="assets/profile.jpg" 
+          alt="FOP tree planting group photo"
+          draggable="false" 
+          oncontextmenu="return false;" 
+          style="pointer-events: none; user-select: none;"
+        >
         <figcaption>
-          Embracing green living—one plant, one habit at a time.
+          <span>Embracing green living—one plant, one habit at a time.</span>
         </figcaption>
       </figure>
   
@@ -57,7 +64,9 @@
   
         <p>
           I also love <strong class="highlight-lavender">upcycling old clothes</strong> and giving new life to items that would otherwise be discarded. It&rsquo;s a creative challenge—and a great reminder that sustainability can be stylish and fun too!
+        </p>
 
+        <p>
           To me, living green isn&rsquo;t about being perfect—it&rsquo;s about being intentional. I&rsquo;m always learning, experimenting, and sharing tips to make eco-living more <span class="highlight-green">accessible,&nbsp;rewarding,&nbsp;and&nbsp;enjoyable</span>. Thanks for being part of the journey!
         </p>
 
@@ -89,7 +98,13 @@
       </div>
     </section>
 
+    
   </main>  
-
+  
+  <script>
+    document.querySelector(".profile").addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+  </script>
 </body>
 </html>
