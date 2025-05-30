@@ -9,7 +9,7 @@ nav li:hover::before {
 /* --------------------------------------------------------------------- */
 
 .goals-content-wrapper {
-  max-width: 800px;
+  max-width: 900px;
   margin: 1em auto; /* centers the content */
   padding: 1em;
   color: var(--charcoal-black);

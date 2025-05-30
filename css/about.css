@@ -92,6 +92,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ensure video doesnt stretch too greatly on large screens */
+@media (max-width: 1000px) {
+  .video-section {
+    max-width: 1000px;
+  }
+}
+
 .video-section .video-content {
   display: grid;
   grid-template-columns: 35vw 65vw;
